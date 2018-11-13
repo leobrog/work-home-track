@@ -1,0 +1,19 @@
+{
+  "name": "work-home-track",
+  "version": "1.0.0",
+  "description": "Tracking of time spent in work and home using IFTTT webhooks",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Brognoli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "moment": "^2.22.2",
+    "moment-timezone": "^0.5.23",
+    "mongoose": "^5.3.11"
+  }
+}
