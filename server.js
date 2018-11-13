@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 app.get("/log", (req, res) => {
     const eventlogger = require('./lib/services/eventlogger')()
     eventlogger.logEvent(req.query.type).then(result => {
-        res.send(result)
+        res.send(JSON.stringify(result, null, 2))
     }).catch(err => {
         res.send(err)
     })
@@ -19,7 +19,7 @@ app.get("/log", (req, res) => {
 app.get("/history", (req, res) => {
     const eventlogger = require('./lib/services/eventlogger')()
     eventlogger.getHistory().then(result => {
-        res.send(result)
+        res.send(JSON.stringify(result, null, 2))
     }).catch(err => {
         res.send(err)
     }) 
