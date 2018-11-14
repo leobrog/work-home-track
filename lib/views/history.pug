@@ -1,0 +1,12 @@
+block content
+div
+   table.table.table-hover
+    thead
+      tr: th Event
+          th Date
+    tbody
+      each log in history
+        tr
+          td=log.Type
+          td=log.Date
+          
