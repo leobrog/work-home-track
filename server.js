@@ -3,7 +3,7 @@ const cluster = require("cluster")
 if( cluster.isMaster ){
     console.log(`Master ${process.pid} is running`);
     // Fork workers.
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 2; i++) {
         cluster.fork();
     }
 
@@ -14,7 +14,6 @@ if( cluster.isMaster ){
 } else {
 
     const express = require('express')
-    const bodyParser = require('body-parser')
 
     const app = express()
     const {mongoose} = require('./lib/db/mongoose')
